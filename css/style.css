@@ -1,0 +1,125 @@
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span,
+div {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--lines-color);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav__section {
+  align-items: center;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /*between el in section*/
+  border: 1px solid var(--border-color);
+}
+
+.nav__channel-logo,
+.nav__contents {
+  flex-basis: 33.22%;
+}
+
+.nav__channel-logo {
+  flex-direction: row;
+  justify-content:start;
+}
+
+#head-logo {
+  height: 4rem;
+  padding-left: 1rem;
+}
+
+.large-logo {
+  height: 7rem;
+}
+.tiny-logo {
+  height: 2rem;
+}
+
+.view__section img {
+  max-width: 100vmin;
+}
+
+#view__photo1 {
+  background-image: url(/assets/mountains_high-res.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.view__title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  font-size: 3rem;
+  padding-left: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view__info {
+  position: absolute;
+  padding: 2rem;
+  bottom: 0;
+  font-size: 1.3rem;
+}
+.view__photo {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__link-form,
+.nav__links {
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.view {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.view__section {
+  height: 100%;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.view__interactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
