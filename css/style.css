@@ -45,7 +45,7 @@ nav {
 
 .nav__channel-logo {
   flex-direction: row;
-  justify-content:start;
+  justify-content: start;
 }
 
 #head-logo {
@@ -75,8 +75,8 @@ nav {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   font-size: 3rem;
-  padding-left: 3rem;
-  width: 100%;
+  padding: 0rem 3rem;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -92,6 +92,12 @@ nav {
 .view__photo {
   width: 100%;
   height: 100%;
+}
+
+.view__photo:hover {
+  opacity: 0.8;
+  transition: all 0.15s;
+  cursor:pointer;
 }
 
 .nav__link-form,
@@ -122,4 +128,83 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+
+
+.form {
+  position:fixed;
+  /* top:25%;
+  left: 25%; */
+
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /*-50% of the size of form*/
+  transition: 0.2s ease-in-out;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--form-color);
+  max-width: 85%;
+  max-height: 85%;
+  height:600px;
+  width: 800px;
+}
+.form.active {
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+.form__header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.close-pop-up-button {
+  cursor: pointer;
+  border: none;
+  color: var(--lines-color);
+  outline:none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right:7px;
+}
+
+.form__body {
+  padding: 1rem;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0, 0.5);
+  pointer-events: none;  /*non-active*/
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events:all;
+}
+
+.btn-txt {
+  border: none;
+  background-color: inherit;
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
 }

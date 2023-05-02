@@ -29,7 +29,9 @@
       </a>
     </div>
     <div class="nav__section nav__link-form">
-      <a href="#">GET IN TOUCH</a>
+      <button data-pop-up-target="#contact" class="btn-txt">
+        <p>GET IN TOUCH</p>
+      </button>
     </div>
   </nav>
   <main>
@@ -58,6 +60,20 @@
         </div>
       </div>
     </div>
+
+    <div class="pop-up-library">
+      <div class="form pop-up" id="contact">
+        <div class="form__header">
+          <div class="form__title">Contact us</div>
+          <button data-pop-up-close class="close-pop-up-button">&times;</button>
+        </div>
+        <div class="form__body">
+          <h2>This is the place where the form to contact us will be</h2>
+        </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
   </main>
 </body>
 
