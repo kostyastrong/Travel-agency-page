@@ -1,135 +1,122 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/dark-theme-var.css" id="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <script src="https://kit.fontawesome.com/e603322aa3.js" crossorigin="anonymous"></script> -->
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__section nav__channel-logo">
-        <div>
-          <a href="https://t.me/average_kaif_enjoyer">
-            <img
-              src="assets/dark_theme/logo-white.svg"
-              alt="head-logo"
-              id="head-logo" />
-          </a>
-        </div>
-      </div>
-      <div class="nav__section nav__contents">
-        <a href="#">ABOUT US</a>
-      </div>
-      <div class="nav__section nav__links">
-        <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
-        <a href="https://github.com/kostyastrong">
-          <img
-            src="assets/dark_theme/github-light.svg"
-            alt="github-logo"
-            class="tiny-logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/dark-theme-var.css" id="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <script src="https://kit.fontawesome.com/e603322aa3.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+  <nav>
+    <div class="nav__section nav__channel-logo">
+      <div>
+        <a href="https://t.me/average_kaif_enjoyer">
+          <img src="assets/dark_theme/logo-white.svg" alt="head-logo" id="head-logo" />
         </a>
       </div>
-      <div class="nav__section nav__link-form">
-        <button data-pop-up-target="#contact" class="btn-txt">
-          <p>GET IN TOUCH</p>
-        </button>
+    </div>
+    <div class="nav__section nav__contents">
+      <a href="#">ABOUT US</a>
+    </div>
+    <div class="nav__section nav__links">
+      <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
+      <a href="https://github.com/kostyastrong">
+        <img src="assets/dark_theme/github-light.svg" alt="github-logo" class="tiny-logo" />
+      </a>
+    </div>
+    <div class="nav__section nav__link-form">
+      <button data-pop-up-target="#contact" class="btn-txt">
+        <p>GET IN TOUCH</p>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <div class="view">
+      <div class="view__section">
+        <div class="view__photo" id="view__photo1"></div>
+        <!-- <div class="view__photo"><img src="assets/mountains_high-res.jpg" alt="mountains_high-res"></div> -->
       </div>
-    </nav>
-    <main>
-      <div class="view">
-        <div class="view__section">
-          <div class="view__photo" id="view__photo1"></div>
-          <!-- <div class="view__photo"><img src="assets/mountains_high-res.jpg" alt="mountains_high-res"></div> -->
-        </div>
-        <div class="view__section">
-          <div class="view__info">
-            <div>
-              We organise trips to mountains. Small groups, large groups, solo
-              hiking - anything suits us!
-            </div>
-            <br />
-            <div>
-              Fresh air and picturesque views, what can be better? Check out our
-              gallery on the left side to see more.
-            </div>
+      <div class="view__section">
+        <div class="view__info">
+          <div>
+            We organise trips to mountains. Small groups, large groups, solo
+            hiking - anything suits us!
           </div>
-        </div>
-        <div class="view__section">
-          <div class="view__cover-info">
-            <div class="view__title">Mountains are waiting for you!</div>
-          </div>
-        </div>
-        <div class="view__section">
-          <div class="view__interactions">
-            <img
-              src="assets/dark_theme/snowflake-logo-blue.svg"
-              alt="snowflake-logo-blue"
-              class="large-logo" />
-            <img
-              src="assets/dark_theme/light-mode.svg"
-              alt="dark-mode"
-              class="large-logo" />
+          <br />
+          <div>
+            Fresh air and picturesque views, what can be better? Check out our
+            gallery on the left side to see more.
           </div>
         </div>
       </div>
+      <div class="view__section">
+        <div class="view__cover-info">
+          <div class="view__title">Mountains are waiting for you!</div>
+        </div>
+      </div>
+      <div class="view__section">
+        <div class="view__interactions">
+          <img src="assets/dark_theme/snowflake-logo-blue.svg" alt="snowflake-logo-blue" class="large-logo" />
+          <img src="assets/dark_theme/light-mode.svg" alt="dark-mode" class="large-logo" />
+        </div>
+      </div>
+    </div>
 
-      <div class="pop-up-library">
-        <div class="form pop-up" id="contact">
-          <div class="form__header">
-            <div class="form__title">Contact us</div>
-            <button data-pop-up-close class="close-pop-up-button">
-              &times;
-            </button>
+    <div class="pop-up-library">
+      <form action="" method="post" name="contact" class="form pop-up" id="contact">
+        <div class="form__header">
+          <div class="form__title">Contact us</div>
+          <button data-pop-up-close class="close-pop-up-button">
+            &times;
+          </button>
+        </div>
+        <div class="form__body">
+          <div class="form__pair">
+            <label for="phone">Phone number:</label>
+            <div>
+              +7
+              <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required />
+              <small>10 digits, example: 9965553535</small>
+            </div>
           </div>
-          <div class="form__body">
+          <br />
+          <form id="survey-form">
             <div class="form__pair">
-              <label for="phone">Phone number:</label>
-              <div>
-                +7
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  pattern="[0-9]{10}"
-                  required />
-                <small>Example: 9965553535</small>
-              </div>
+              <label for="name">Name</label>
+              <input type="text" id="contact-name" required />
             </div>
-            <br />
-            <form id="survey-form">
-              <div class="form__pair">
-                <label for="name">Name</label>
-                <input type="text" id="name" />
-              </div>
-              <div class="form__pair">
-                <label for="email">Email (optional)</label>
-                <input type="email" id="email" />
-              </div>
-            </form>
-            <br />
             <div class="form__pair">
-              <label for="name">Describe your request (optional):</label>
-              <textarea name="Request" cols="40" rows="5"></textarea>
+              <label for="email">Email (optional)</label>
+              <input type="email" id="contact-email" placeholder="example@domen.com" />
+              <p id="contact-email-result"></p>
             </div>
-            <br />
-            <br />
-            <div class="submit-button">
-              <button style="width: 100%" type="submit">Submit</button>
-            </div>
+          </form>
+          <br />
+          <div class="form__pair">
+            <label for="name">Describe your request (optional):</label>
+            <textarea style="width: 100%;" name="Request" cols="40" rows="5" id="contact-description"
+              placeholder="Number of people, wishes or price questions, etc..."></textarea>
+          </div>
+          <br />
+          <br />
+          <div class="submit-button">
+            <button style="width: 100%" type="submit">Submit</button>
           </div>
         </div>
-        <!-- <div class="form pop-up" id="gallery">
+    </div>
+    <!-- <div class="form pop-up" id="gallery">
         <div class="form__body">
           <h2>Gallery pop-up</h2>
         </div>
       </div> -->
-      </div>
-      <div id="overlay"></div>
-      <script src="script.js"></script>
-    </main>
-  </body>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+  </main>
+</body>
+
 </html>
