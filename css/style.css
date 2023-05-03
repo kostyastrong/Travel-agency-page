@@ -134,12 +134,10 @@ main {
 
 .form {
   position:fixed;
-  /* top:25%;
-  left: 25%; */
-
   top:50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0); /*-50% of the size of form*/
+  transform: translate(-50%, -50%) scale(0); 
+  /*-50% of the size of form*/
   transition: 0.2s ease-in-out;
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -207,4 +205,15 @@ main {
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__pair {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px
 }
