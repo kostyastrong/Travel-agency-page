@@ -207,7 +207,7 @@ main {
   display: inline-block;
 }
 
-#survey-form {
+.survey-form {
   display: flex;
   flex-direction: row;
 }

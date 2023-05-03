@@ -75,17 +75,13 @@
           </button>
         </div>
         <div class="form__body">
-          <div class="form__pair">
-            <div for="phone">Phone number:</div>
-            <div>
-              +7
-              <label for="phone" hidden>Phone number</label>
-              <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required />
-              <small>10 digits, example: 9965553535</small>
-            </div>
+          <div>
+            <label for="phone">Phone number: </label>
+            +7<input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required />
+            <small>10 digits, example: 9965553535</small>
           </div>
           <br />
-          <form id="survey-form">
+          <div class="survey-form">
             <div class="form__pair">
               <label for="name">Name</label>
               <input type="text" id="contact-name" required />
@@ -95,7 +91,7 @@
               <input type="email" id="contact-email" placeholder="example@domen.com" />
               <p id="contact-email-result"></p>
             </div>
-          </form>
+          </div>
           <br />
           <div class="form__pair">
             <label for="name">Describe your request (optional):</label>

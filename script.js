@@ -73,7 +73,7 @@ const validate = () => {
     var result = document.getElementById('contact-email-result');
     const email = document.getElementById('contact-email').value;
     result.innerHTML = '';
-    if (email.value == '') {
+    if (email == '') {
         return;
     }
 
