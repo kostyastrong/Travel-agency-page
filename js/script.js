@@ -1,5 +1,3 @@
-
-
 // post form
 
 document.forms.contact.addEventListener('submit', function (event) {
@@ -113,7 +111,7 @@ function setSrcImg(img, s) {
 
 function updateGallery(gallery, newIndex) {
     if (!gallery.classList.contains('gallery')) return;
-    
+
     const imgs = document.querySelector('.storage').querySelectorAll('img');
     if (newIndex >= imgs.length) {
         newIndex -= imgs.length;
@@ -169,8 +167,41 @@ function openPopUp(popup) {
 
 function closePopUp(popup) {
     if (popup == null) return;  // no pop-up inside
-    // debugger;
     updateGallery(popup, 0);
     popup.classList.remove('active');
     overlay.classList.remove('active');
 }
+
+
+// theme
+
+const themeSwitcher = document.getElementById('theme-switcher');
+
+function switchSrcFolders(obj, searchValue, replaceValue) {
+    ;
+    obj.setAttribute('src', obj.getAttribute('src').replace(searchValue, replaceValue));
+}
+
+themeSwitcher.addEventListener('click', () => {
+    const currentStyle = stylesheet.href;
+    ;
+
+    const lightTheme = "css/light-theme-var.css";
+    const darkTheme = "css/dark-theme-var.css";
+    let searchValue = "dark";
+    let replaceValue = 'light';
+
+    if (currentStyle.indexOf(lightTheme) !== -1) {
+        stylesheet.href = darkTheme;
+        searchValue = 'light';
+        replaceValue = 'dark';
+    }
+    else {
+        stylesheet.href = lightTheme;
+    }
+
+    const icons = document.querySelectorAll('.icon');
+    icons.forEach(img => {
+        switchSrcFolders(img, searchValue, replaceValue);
+    })
+})

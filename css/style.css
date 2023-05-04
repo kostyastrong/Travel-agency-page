@@ -38,6 +38,10 @@ nav {
   border: 1px solid var(--border-color);
 }
 
+.nav__section * {
+  font-size: var(--nav-text-size);
+}
+
 .nav__channel-logo,
 .nav__contents {
   flex-basis: 33.22%;
@@ -87,7 +91,7 @@ nav {
   position: absolute;
   padding: 2rem;
   bottom: 0;
-  font-size: 1.3rem;
+  font-size: var(--info-size);
 }
 .view__photo {
   width: 100%;
@@ -202,7 +206,6 @@ main {
   border: none;
   background-color: inherit;
   padding: 14px 40px;
-  font-size: 16px;
   cursor: pointer;
   display: inline-block;
 }
@@ -246,4 +249,8 @@ main {
   background-color: rgba(0,0,0, 0.05);
   transition: 0.2s ease-in-out;
   cursor:pointer; 
+}
+
+.clickable {
+  cursor: pointer;
 }
