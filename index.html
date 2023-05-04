@@ -37,7 +37,7 @@
   <main>
     <div class="view">
       <div class="view__section">
-        <div data-pop-up-target="#gallery__form" class="view__photo" id="view__photo1"></div>
+        <div data-pop-up-target="#gallery" class="view__photo" id="view__photo1"></div>
         <!-- <div class="view__photo"><img src="assets/mountains_high-res.jpg" alt="mountains_high-res"></div> -->
       </div>
       <div class="view__section">
@@ -107,15 +107,15 @@
       </form>
 
 
-      <form method="post" name="gallery" class="form pop-up" id="gallery__form">
+      <form method="post" name="gallery" class="form pop-up gallery" id="gallery" data-index="0">
         <div class="form__body">
-          <div data-storage="#gallery__storage" data-index="0" id="gallery">
-            <img src="/assets/mountains/low-res/1.jpg" alt="current-photo">
+          <div>
+            <img class="gallery__main" src="/assets/mountains/low-res/1.jpg" alt="current-photo">
             <div data-decrease-click="#gallery" class="click-side left" hidden></div>
             <div data-increase-click="#gallery" class="click-side right"></div>
           </div>
         </div>
-        <div id="gallery__storage">
+        <div class="storage">
           <img src="/assets/mountains/low-res/1.jpg" alt="0th photo">
           <img src="/assets/mountains/low-res/2.jpg" alt="1st photo">
           <img src="/assets/mountains/low-res/3.jpg" alt="2nd photo">

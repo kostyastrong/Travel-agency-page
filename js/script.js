@@ -112,8 +112,9 @@ function setSrcImg(img, s) {
 }
 
 function updateGallery(gallery, newIndex) {
-    console.log(document.querySelector(gallery.dataset.storage));
-    const imgs = document.querySelector(gallery.dataset.storage).querySelectorAll('img');
+    if (!gallery.classList.contains('gallery')) return;
+    
+    const imgs = document.querySelector('.storage').querySelectorAll('img');
     if (newIndex >= imgs.length) {
         newIndex -= imgs.length;
     } else if (newIndex < 0) {
@@ -121,14 +122,16 @@ function updateGallery(gallery, newIndex) {
     }
     if (newIndex == 0) {
         gallery.querySelector('.click-side.left').hidden = true;
+        gallery.querySelector('.click-side.right').hidden = false;
     } else if (newIndex == imgs.length - 1) {
         gallery.querySelector('.click-side.right').hidden = true;
+        gallery.querySelector('.click-side.left').hidden = false;
     } else {
         gallery.querySelector('.click-side.left').hidden = false;
         gallery.querySelector('.click-side.right').hidden = false;
     }
     gallery.dataset.index = newIndex;
-    setSrcImg(gallery.querySelector('img'), imgs[newIndex].getAttribute('src'));
+    setSrcImg(gallery.querySelector('.gallery__main'), imgs[newIndex].getAttribute('src'));
 }
 
 // pop-up methods
@@ -166,8 +169,8 @@ function openPopUp(popup) {
 
 function closePopUp(popup) {
     if (popup == null) return;  // no pop-up inside
-    debugger;
-    popup.dataset.index = 0;
+    // debugger;
+    updateGallery(popup, 0);
     popup.classList.remove('active');
     overlay.classList.remove('active');
 }

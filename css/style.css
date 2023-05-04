@@ -218,7 +218,7 @@ main {
   margin-right: 10px
 }
 
-#gallery__storage {
+.storage {
   transform: scale(0);
 }
 
