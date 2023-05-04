@@ -1,6 +1,4 @@
-const openPopButtons = document.querySelectorAll('[data-pop-up-target]')
-const closePopButtons = document.querySelectorAll('[data-pop-up-close]')
-const overlay = document.getElementById('overlay')
+
 
 // post form
 
@@ -90,7 +88,54 @@ const validate = () => {
 document.getElementById('contact-email').addEventListener('input', validate);
 
 
+// gallery
+const decreasePhotoButton = document.querySelectorAll('[data-decrease-click]');
+const increasePhotoButton = document.querySelectorAll('[data-increase-click]');
+var photoId = 0;
+
+decreasePhotoButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const gallery = document.querySelector(button.dataset.decreaseClick);
+        updateGallery(gallery, -1 + Number(gallery.dataset.index));
+    })
+})
+
+increasePhotoButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const gallery = document.querySelector(button.dataset.increaseClick);
+        updateGallery(gallery, 1 + Number(gallery.dataset.index));
+    })
+})
+
+function setSrcImg(img, s) {
+    img.setAttribute('src', s);
+}
+
+function updateGallery(gallery, newIndex) {
+    console.log(document.querySelector(gallery.dataset.storage));
+    const imgs = document.querySelector(gallery.dataset.storage).querySelectorAll('img');
+    if (newIndex >= imgs.length) {
+        newIndex -= imgs.length;
+    } else if (newIndex < 0) {
+        newIndex += imgs.length;
+    }
+    if (newIndex == 0) {
+        gallery.querySelector('.click-side.left').hidden = true;
+    } else if (newIndex == imgs.length - 1) {
+        gallery.querySelector('.click-side.right').hidden = true;
+    } else {
+        gallery.querySelector('.click-side.left').hidden = false;
+        gallery.querySelector('.click-side.right').hidden = false;
+    }
+    gallery.dataset.index = newIndex;
+    setSrcImg(gallery.querySelector('img'), imgs[newIndex].getAttribute('src'));
+}
+
 // pop-up methods
+const openPopButtons = document.querySelectorAll('[data-pop-up-target]')
+const closePopButtons = document.querySelectorAll('[data-pop-up-close]')
+const overlay = document.getElementById('overlay')
+
 openPopButtons.forEach(button => {
     button.addEventListener('click', () => {
         const popup = document.querySelector(button.dataset.popUpTarget);
@@ -121,6 +166,8 @@ function openPopUp(popup) {
 
 function closePopUp(popup) {
     if (popup == null) return;  // no pop-up inside
+    debugger;
+    popup.dataset.index = 0;
     popup.classList.remove('active');
     overlay.classList.remove('active');
 }

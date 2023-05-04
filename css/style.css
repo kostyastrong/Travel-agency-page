@@ -217,3 +217,33 @@ main {
   flex-direction: column;
   margin-right: 10px
 }
+
+#gallery__storage {
+  transform: scale(0);
+}
+
+#gallery img {
+  width: 100%;
+  position: relative;
+}
+
+.click-side {
+  position: absolute;
+  top:0px;
+  width: 13rem;
+  height: 100%;
+}
+
+.click-side.left {
+  left:0px;
+}
+
+.click-side.right {
+  right:0px;
+}
+
+.click-side:hover {
+  background-color: rgba(0,0,0, 0.05);
+  transition: 0.2s ease-in-out;
+  cursor:pointer; 
+}
