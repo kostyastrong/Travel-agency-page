@@ -248,3 +248,21 @@ function alertCookie() {
 }
 
 alertCookie();
+
+
+//snow
+const snowflakeButton = document.getElementById('snow-starting');
+let isSnowing = false;
+
+snowflakeButton.addEventListener('click', () => {
+    const snow = document.getElementById('snow');
+    const snowFade = document.getElementById('snow-fade');
+    if (isSnowing) {
+        snow.classList.remove('snow');
+        snowFade.classList.remove('snow-fade');
+    } else {
+        snow.classList.add('snow');
+        snowFade.classList.add('snow-fade');
+    }
+    isSnowing = !isSnowing;
+})

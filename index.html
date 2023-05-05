@@ -7,127 +7,133 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/dark-theme-var.css" id="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/snow.css">
   <!-- <script src="https://kit.fontawesome.com/e603322aa3.js" crossorigin="anonymous"></script> -->
 </head>
 
-<body>
-  <nav>
-    <div class="nav__section nav__channel-logo">
-      <div>
-        <a href="https://t.me/average_kaif_enjoyer">
-          <img class="icon" src="assets/dark_theme/logo.svg" alt="head-logo" id="head-logo" />
-        </a>
-      </div>
-    </div>
-    <div class="nav__section nav__contents">
-      <a href="#">ABOUT US</a>
-    </div>
-    <div class="nav__section nav__links">
-      <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
-      <a href="https://github.com/kostyastrong">
-        <img src="assets/dark_theme/github.svg" alt="github-logo" class="icon tiny-logo" />
-      </a>
-    </div>
-    <div class="nav__section nav__link-form">
-      <button data-pop-up-target="#contact" class="btn-txt">
-        <p>GET IN TOUCH</p>
-      </button>
-    </div>
-  </nav>
-  <main>
-    <div class="view">
-      <div class="view__section">
-        <div data-pop-up-target="#gallery" class="view__photo" id="view__photo1"></div>
-        <!-- <div class="view__photo"><img src="assets/mountains_high-res.jpg" alt="mountains_high-res"></div> -->
-      </div>
-      <div class="view__section">
-        <div class="view__info">
-          <div>
-            We organise trips to mountains. Small groups, large groups, solo
-            hiking - anything suits us!
-          </div>
-          <br />
-          <div>
-            Fresh air and picturesque views, what can be better? Check out our
-            gallery on the left side to see more.
-          </div>
-        </div>
-      </div>
-      <div class="view__section">
-        <div class="view__cover-info">
-          <div class="view__title">Mountains are waiting for you!</div>
-        </div>
-      </div>
-      <div class="view__section">
-        <div class="view__interactions">
-          <img id="snow-starting" src="assets/dark_theme/snowflake-logo.svg" alt="snowflake-logo-blue"
-            class="icon large-logo clickable" />
-          <img id="theme-switcher" src="assets/dark_theme/theme-switcher.svg" alt="dark-mode"
-            class="icon large-logo clickable" />
-        </div>
-      </div>
-    </div>
 
-    <div class="pop-up-library">
-      <form method="post" name="contact" class="form pop-up" id="contact">
-        <div class="form__header">
-          <div class="form__title">Contact us</div>
-          <button data-pop-up-close class="close-pop-up-button">
-            &times;
+<body>
+  <div id="snow" class="">
+    <div id="snow-fade" class="page">
+      <nav>
+        <div class=" nav__section nav__channel-logo">
+          <div>
+            <a href="https://t.me/average_kaif_enjoyer">
+              <img class="icon" src="assets/dark_theme/logo.svg" alt="head-logo" id="head-logo" />
+            </a>
+          </div>
+        </div>
+        <div class="nav__section nav__contents">
+          <a href="#">ABOUT US</a>
+        </div>
+        <div class="nav__section nav__links">
+          <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
+          <a href="https://github.com/kostyastrong">
+            <img src="assets/dark_theme/github.svg" alt="github-logo" class="icon tiny-logo" />
+          </a>
+        </div>
+        <div class="nav__section nav__link-form">
+          <button data-pop-up-target="#contact" class="btn-txt">
+            <p>GET IN TOUCH</p>
           </button>
         </div>
-        <div class="form__body">
-          <div>
-            <label for="phone">Phone number: </label>
-            +7<input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required />
-            <small>10 digits, example: 9965553535</small>
+      </nav>
+      <main>
+        <div class="view">
+          <div class="view__section">
+            <div data-pop-up-target="#gallery" class="view__photo" id="view__photo1"></div>
+            <!-- <div class="view__photo"><img src="assets/mountains_high-res.jpg" alt="mountains_high-res"></div> -->
           </div>
-          <br />
-          <div class="survey-form">
-            <div class="form__pair">
-              <label for="name">Name</label>
-              <input type="text" id="contact-name" required />
+          <div class="view__section">
+            <div class="view__info">
+              <div>
+                We organise trips to mountains. Small groups, large groups, solo
+                hiking - anything suits us!
+              </div>
+              <br />
+              <div>
+                Fresh air and picturesque views, what can be better? Check out our
+                gallery on the left side to see more.
+              </div>
             </div>
-            <div class="form__pair">
-              <label for="email">Email (optional)</label>
-              <input type="email" id="contact-email" placeholder="example@domen.com" />
-              <p id="contact-email-result"></p>
+          </div>
+          <div class="view__section">
+            <div class="view__cover-info">
+              <div class="view__title">Mountains are waiting for you!</div>
             </div>
           </div>
-          <br />
-          <div class="form__pair">
-            <label for="name">Describe your request (optional):</label>
-            <textarea style="width: 100%;" name="Request" cols="40" rows="5" id="contact-description"
-              placeholder="Number of people, wishes or price questions, etc..."></textarea>
-          </div>
-          <br />
-          <br />
-          <div class="submit-button">
-            <button style="width: 100%" type="submit">Submit</button>
+          <div class="view__section">
+            <div class="view__interactions">
+              <img id="snow-starting" src="assets/dark_theme/snowflake-logo.svg" alt="snowflake-logo-blue"
+                class="icon large-logo clickable" />
+              <img id="theme-switcher" src="assets/dark_theme/theme-switcher.svg" alt="dark-mode"
+                class="icon large-logo clickable" />
+            </div>
           </div>
         </div>
-      </form>
+
+        <div class="pop-up-library">
+          <form method="post" name="contact" class="form pop-up" id="contact">
+            <div class="form__header">
+              <div class="form__title">Contact us</div>
+              <button data-pop-up-close class="close-pop-up-button">
+                &times;
+              </button>
+            </div>
+            <div class="form__body">
+              <div>
+                <label for="phone">Phone number: </label>
+                +7<input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required />
+                <small>10 digits, example: 9965553535</small>
+              </div>
+              <br />
+              <div class="survey-form">
+                <div class="form__pair">
+                  <label for="name">Name</label>
+                  <input type="text" id="contact-name" required />
+                </div>
+                <div class="form__pair">
+                  <label for="email">Email (optional)</label>
+                  <input type="email" id="contact-email" placeholder="example@domen.com" />
+                  <p id="contact-email-result"></p>
+                </div>
+              </div>
+              <br />
+              <div class="form__pair">
+                <label for="name">Describe your request (optional):</label>
+                <textarea style="width: 100%;" name="Request" cols="40" rows="5" id="contact-description"
+                  placeholder="Number of people, wishes or price questions, etc..."></textarea>
+              </div>
+              <br />
+              <br />
+              <div class="submit-button">
+                <button style="width: 100%" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
 
 
-      <form method="post" name="gallery" class="form pop-up gallery" id="gallery" data-index="0">
-        <div class="form__body">
-          <div>
-            <img class="gallery__main" src="/assets/mountains/low-res/1.jpg" alt="current-photo">
-            <div data-decrease-click="#gallery" class="click-side left" hidden></div>
-            <div data-increase-click="#gallery" class="click-side right"></div>
-          </div>
+          <form method="post" name="gallery" class="form pop-up gallery" id="gallery" data-index="0">
+            <div class="form__body">
+              <div>
+                <img class="gallery__main" src="/assets/mountains/low-res/1.jpg" alt="current-photo">
+                <div data-decrease-click="#gallery" class="click-side left" hidden></div>
+                <div data-increase-click="#gallery" class="click-side right"></div>
+              </div>
+            </div>
+            <div class="storage">
+              <img src="/assets/mountains/low-res/1.jpg" alt="0th photo">
+              <img src="/assets/mountains/low-res/2.jpg" alt="1st photo">
+              <img src="/assets/mountains/low-res/3.jpg" alt="2nd photo">
+              <img src="/assets/mountains/low-res/4.jpg" alt="3rd photo">
+            </div>
+          </form>
         </div>
-        <div class="storage">
-          <img src="/assets/mountains/low-res/1.jpg" alt="0th photo">
-          <img src="/assets/mountains/low-res/2.jpg" alt="1st photo">
-          <img src="/assets/mountains/low-res/3.jpg" alt="2nd photo">
-          <img src="/assets/mountains/low-res/4.jpg" alt="3rd photo">
-        </div>
-      </form>
+        <div id="overlay"></div>
+        <script src="js/script.js"></script>
+      </main>
     </div>
-    <div id="overlay"></div>
-    <script src="js/script.js"></script>
-  </main>
+  </div>
 </body>
 
 </html>

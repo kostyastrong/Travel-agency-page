@@ -1,8 +1,6 @@
 body {
   background-color: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  height: 100%;
   margin: 0px;
   overflow: hidden;
 }
@@ -111,6 +109,7 @@ nav {
 
 main {
   flex-grow: 1;
+  height: 100%;
 }
 
 .view {
