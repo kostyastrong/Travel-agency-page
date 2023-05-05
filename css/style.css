@@ -5,7 +5,8 @@ body {
   overflow: hidden;
 }
 
-textarea, input {
+textarea,
+input {
   background-color: transparent;
   color: var(--lines-color);
 }
@@ -37,7 +38,8 @@ nav {
   height: 5rem;
   display: flex;
   justify-content: center;
-  gap: 3rem; /*between el in section*/
+  gap: 3rem;
+  /*between el in section*/
   border: 1px solid var(--border-color);
 }
 
@@ -63,6 +65,7 @@ nav {
 .large-logo {
   height: 7rem;
 }
+
 .tiny-logo {
   height: 2rem;
 }
@@ -96,6 +99,7 @@ nav {
   bottom: 0;
   font-size: var(--info-size);
 }
+
 .view__photo {
   width: 100%;
   height: 100%;
@@ -104,7 +108,7 @@ nav {
 .view__photo:hover {
   opacity: 0.8;
   transition: all 0.15s;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .nav__link-form,
@@ -141,10 +145,10 @@ main {
 
 
 .form {
-  position:fixed;
-  top:50%;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0); 
+  transform: translate(-50%, -50%) scale(0);
   /*-50% of the size of form*/
   transition: 0.2s ease-in-out;
   border: 1px solid var(--border-color);
@@ -153,11 +157,11 @@ main {
   background-color: var(--form-color);
   max-width: 85%;
   max-height: 85%;
-  height:600px;
   width: 800px;
 }
+
 .form.active {
-  transform: translate(-50%, -50%) scale(1); 
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .form__header {
@@ -178,11 +182,11 @@ main {
   cursor: pointer;
   border: none;
   color: var(--lines-color);
-  outline:none;
+  outline: none;
   background: none;
   font-size: 1.5rem;
   font-weight: bold;
-  padding-right:7px;
+  padding-right: 7px;
 }
 
 .form__body {
@@ -197,13 +201,14 @@ main {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0, 0.5);
-  pointer-events: none;  /*non-active*/
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  /*non-active*/
 }
 
 #overlay.active {
   opacity: 1;
-  pointer-events:all;
+  pointer-events: all;
 }
 
 .btn-txt {
@@ -226,7 +231,8 @@ main {
 }
 
 .storage {
-  transform: scale(0);
+  width: 0;
+  height: 0;
 }
 
 #gallery img {
@@ -236,23 +242,23 @@ main {
 
 .click-side {
   position: absolute;
-  top:0px;
+  top: 0px;
   width: 13rem;
   height: 100%;
 }
 
 .click-side.left {
-  left:0px;
+  left: 0px;
 }
 
 .click-side.right {
-  right:0px;
+  right: 0px;
 }
 
 .click-side:hover {
-  background-color: rgba(0,0,0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   transition: 0.2s ease-in-out;
-  cursor:pointer; 
+  cursor: pointer;
 }
 
 .clickable {
