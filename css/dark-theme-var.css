@@ -1,6 +1,6 @@
 :root {
   --background-color: rgb(16, 23, 23);
-  --lines-color: rgb(236, 255, 255);
+  --lines-color: aliceblue;
   --border-color: rgb(255, 255, 255, 0.1);
   --form-color: rgb(16, 23, 23, 0.9);
   --info-size: 20px;
