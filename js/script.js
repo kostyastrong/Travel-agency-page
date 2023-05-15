@@ -63,6 +63,9 @@ function validatePrevent(name, tel, email, description) {
     if (alertNonEmptyEmail(email)) {
         return true;
     }
+    if (alertNonEmptyPhone(tel)) {
+        return true;
+    }
     return false;
 }
 
@@ -73,6 +76,14 @@ function checkLang(s, field_abbreviation) {
     const regex = /^[a-zA-Zа-яА-Я0-9_.,'"!?;:& ]+$/i;
     if (!s.match(regex)) {
         alert('Please provide en/ru ' + field_abbreviation);
+        return true;
+    }
+    return false;
+}
+
+function alertNonEmptyPhone(phone) {
+    if (phone !== '' && !validatePhone(phone)) {
+        alert('Please provide correct phone');
         return true;
     }
     return false;
@@ -92,6 +103,14 @@ const validateEmail = (email) => {
     }
     const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
     return email.match(regex);
+};
+
+const validatePhone = (phone) => {
+    if (phone === null || typeof phone !== 'string') {
+        return false;
+    }
+    const regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/i;
+    return phone.match(regex);
 };
 
 const validate = () => {
