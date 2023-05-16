@@ -57,6 +57,9 @@ function createPost(newPost) {
 
 // validate form
 function validatePrevent(name, tel, email, description) {
+    if (alertEmpty(tel, 'Phone number') || alertEmpty(name, "Name field")) {
+        return true;
+    }
     if (checkLang(name, 'name') || (description !== null && description !== '' && checkLang(description, 'description'))) {
         return true;
     }
@@ -65,6 +68,14 @@ function validatePrevent(name, tel, email, description) {
     }
     if (alertNonEmptyPhone(tel)) {
         return true;
+    }
+    return false;
+}
+
+function alertEmpty(s, field) {
+    if (s === "" || s === null) {
+        alert(field + ' is required to submit the form')
+        return true
     }
     return false;
 }
