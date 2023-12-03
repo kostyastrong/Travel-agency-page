@@ -1,5 +1,7 @@
 # Travel-agency-page
-The following task was to implement all 7 points:
+To check functionality by yourself, follow the link: https://kostyastrong.github.io/
+
+The task was to implement all 7 points:
 
 1. Add a gallery of photos (or pictures) to the page with a popup opening with an enlarged picture on the page and toggling left-to-right within the popup. The unnecessary arrow disappears on the outermost elements.
 2. Smooth opening and closing of popup with feedback form.
